@@ -17,11 +17,15 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color:#292929 ;
+}
+.navbar-bg{
+  background-color: #2B2B2B;
+}
+
+.text-color-pj{
+  color: #AEAEAE!important;
+}
+.bg-color-div{
+  background-color: #4F4F4F!important;
 }
