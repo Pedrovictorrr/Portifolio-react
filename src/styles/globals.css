@@ -2,19 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
   background-color:#292929 ;
@@ -24,8 +12,24 @@ body {
 }
 
 .text-color-pj{
-  color: #AEAEAE!important;
+  color: #CBCBCB!important;
 }
 .bg-color-div{
   background-color: #4F4F4F!important;
+}
+.btnTopo {
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  display: none;
+  background-color: #555;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+#btnTopo:hover {
+  background-color: #777;
 }
