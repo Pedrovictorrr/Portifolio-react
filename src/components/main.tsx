@@ -38,7 +38,7 @@ import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
                 <section className="mx-auto items-center ">
                     <div className="mt-24 text-center grid justify-center  items-center justify-items-center w-full   sm:container mx-auto">
                         <div className="w-96 h-96 ">
-                            <img src="/images/pedro2.jpg" alt="" className="rounded-full border " />
+                            <img src="/images/pedro3.png" alt="" className=" animate-bounce" />
                         </div>
                         <h1 className="text-color-pj text-2xl mt-5">Pedro Victor Fernandes de Abreu</h1>
                         <h1 className="text-color-pj text-2xl">Full Stack Developer</h1>
