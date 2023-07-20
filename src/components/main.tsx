@@ -1,28 +1,27 @@
 'use client'
-import React from "react";
-import { useState, useEffect } from 'react';
+
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 
 
    
+const main = () => { 
+    // const [showButton, setShowButton] = useState(false);
 
-    const main = () => { 
-        const [showButton, setShowButton] = React.useState(false);
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // }, []);
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const handleScroll = () => {
-        if (window.pageYOffset > 300) {
-            setShowButton(true);
-        } else {
-            setShowButton(false);
-        }
-    };
+    // const handleScroll = () => {
+    //     if (window.pageYOffset > 300) {
+    //         setShowButton(true);
+    //     } else {
+    //         setShowButton(false);
+    //     }
+    // };
 
     const handleClick = () => {
         window.scrollTo({
@@ -30,17 +29,18 @@ import Image from "next/image";
             behavior: 'smooth'
         });
     };
-        return (
+
+    return (
             <section className="">
-                  {showButton && (
+                  {/* {showButton && (
                             <button className="fixed botton-10 animate-bounce  hover:text-white right-16" onClick={handleClick}>
                                <FontAwesomeIcon className="text-color-pj hover:text-white fa-2x" icon={faCircleArrowUp} />
                             </button>
-                        )}
+                        )} */}
                 <section className="mx-auto items-center ">
                     <div className="mt-24 text-center grid justify-center  items-center justify-items-center w-full   sm:container mx-auto">
                         <div className="w-96 h-96 ">
-                            <Image src="/images/pedro3.png" alt="" className=" animate-bounce" />
+                            <Image width={800} height={800} src="/images/pedro3.png"  alt="" className=" " />
                         </div>
                         <h1 className="text-color-pj text-2xl mt-5">Pedro Victor Fernandes de Abreu</h1>
                         <h1 className="text-color-pj text-2xl">Full Stack Developer</h1>
@@ -69,16 +69,16 @@ import Image from "next/image";
 
                                 <div className=" mt-3 flex justify-center">
                                     <div className="bg-color-div shadow px-6 h-12 py-2 gap-4 rounded-2xl flex border border-stone-600">
-                                        <Image src="/images/Laravel.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
-                                        <Image src="/images/mysql.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
-                                        <Image src="/images/php.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
-                                        <Image src="/images/bootstrap.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
+                                        <Image width={100} height={100} src="/images/Laravel.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
+                                        <Image width={100} height={100} src="/images/mysql.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
+                                        <Image width={100} height={100} src="/images/php.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
+                                        <Image width={100} height={100} src="/images/bootstrap.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
                                     </div>
                                 </div>
                             </div>
                             <div className=" md:basis-1/3 p-5">
                                 <a href="http://www.detro.rj.gov.br"  target="_blank">
-                                    <Image src="/images/detro.png" alt="" className="sm:w-11/12 w-full transition shadow-lg hover:shadow-blue-500/50 duration-500 hover:-translate-y-1 hover:scale-105 h-64 grayscale hover:grayscale-0  rounded-2xl border-4 border-stone-600" />
+                                    <Image width={500} height={100} src="/images/detro.png" alt="" className="sm:w-11/12 w-full transition shadow-lg hover:shadow-blue-500/50 duration-500 hover:-translate-y-1 hover:scale-105 h-64 grayscale hover:grayscale-0  rounded-2xl border-4 border-stone-600" />
                                 </a>
                             </div>
                         </div>
@@ -86,7 +86,7 @@ import Image from "next/image";
                         <div className=" flex-row gap-5 grid justify-center sm:flex">
                             <div className=" sm:basis-1/3 p-5">
                                 <a href="https://www.lanchenapraia.com.br" target="_blank">
-                                    <Image src="/images/Lanche.png" alt="" className="w-auto shadow-lg hover:shadow-cyan-500/50 grayscale transition duration-500 hover:-translate-y-1 hover:scale-105 hover:grayscale-0 rounded-2xl border-4 border-stone-600" />
+                                    <Image width={500} height={100} src="/images/Lanche.png" alt="" className="w-auto shadow-lg hover:shadow-cyan-500/50 grayscale transition duration-500 hover:-translate-y-1 hover:scale-105 hover:grayscale-0 rounded-2xl border-4 border-stone-600" />
                                 </a>
                             </div>
                             <div className="p-5 sm:basis-1/2 justify-center text-center">
@@ -94,13 +94,13 @@ import Image from "next/image";
                                 <p className="text-color-pj mt-3">Eu lidero um emocionante projeto de desenvolvimento de um aplicativo web e mobile para delivery na praia, utilizando React para o front-end web, React Native para o aplicativo mobile, Laravel para a API e MySQL para o banco de dados, todos hospedados na AWS. Como CEO da empresa, tive o prazer de liderar uma equipe talentosa de desenvolvedores, muitos dos quais eram meus amigos pessoais. Juntos, criamos uma solução tecnológica inovadora que permite aos usuários fazerem pedidos de delivery de alimentos na praia com facilidade e conveniência. Foi gratificante ver o projeto ganhar vida e se tornar um sucesso, oferecendo uma experiência única aos nossos clientes.</p>
                                 <div className=" mt-3 flex justify-center">
                                     <div className="bg-color-div shadow px-6 py-2 h-12 gap-4 rounded-2xl flex border border-stone-600">
-                                        <Image src="/images/react.png" alt="React" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                        <Image src="/images/Laravel.png" alt="Laravel" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                        <Image src="/images/mysql.png" alt="Mysql" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                        <Image src="/images/php.png" alt="PHP" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                        <Image src="/images/tailwind.png" alt="Tailwind" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                        <Image src="/images/typescript.png" alt="Typescript" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                        <Image src="/images/aws.png" alt="AWS" className="transition hover:-translate-y-1 hover:scale-110 p-1 h-auto w-auto" />
+                                        <Image width={100} height={100} src="/images/react.png" alt="React" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                        <Image width={100} height={100} src="/images/Laravel.png" alt="Laravel" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                        <Image width={100} height={100} src="/images/mysql.png" alt="Mysql" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                        <Image width={100} height={100} src="/images/php.png" alt="PHP" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                        <Image width={100} height={100} src="/images/tailwind.png" alt="Tailwind" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                        <Image width={100} height={100} src="/images/typescript.png" alt="Typescript" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                        <Image width={100} height={100} src="/images/aws.png" alt="AWS" className="transition hover:-translate-y-1 hover:scale-110 p-1 h-auto w-auto" />
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@ import Image from "next/image";
                                                 <div className="w-full lg:w-1/2 lg:pr-7">
                                                     <div className="p-4 bg-color-div  transition duration-500 hover:-translate-y-1 hover:scale-105   text-color-pj rounded-xl shadow-lg ">
                                                         <div className="p-1 flex justify-center">
-                                                            <a href="https://www.novakio.com.br" target="_blank"><Image src="images/novakio.png" alt="" className="w-24 h-auto" /></a>
+                                                            <a href="https://www.novakio.com.br" target="_blank"><Image width={100} height={100} src="/images/novakio.png" alt="" className="w-24 h-auto" /></a>
 
                                                         </div>
                                                         <div className="text-center">
@@ -137,15 +137,15 @@ import Image from "next/image";
                                                         </div>
                                                         <div className=" mt-3 flex justify-center">
                                                             <div className=" px-6 py-2 h-12 gap-4 w-full  rounded-2xl flex ">
-                                                                <Image src="/images/angular.png" alt="Angular" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                                                <Image src="/images/react.png" alt="React" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                                                <Image src="/images/Laravel.png" alt="Laravel" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                                                <Image src="/images/mysql.png" alt="Mysql" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                                                <Image src="/images/php.png" alt="PHP" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                                                <Image src="/images/tailwind.png" alt="Tailwind" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                                                <Image src="/images/typescript.png" alt="Typescript" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                                                <Image src="/images/docker.png" alt="docker" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
-                                                                <Image src="/images/aws.png" alt="AWS" className="transition hover:-translate-y-1 hover:scale-110 p-1 h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/angular.png" alt="Angular" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/react.png" alt="React" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/Laravel.png" alt="Laravel" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/mysql.png" alt="Mysql" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/php.png" alt="PHP" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/tailwind.png" alt="Tailwind" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/typescript.png" alt="Typescript" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/docker.png" alt="docker" className="transition hover:-translate-y-1 hover:scale-110 h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/aws.png" alt="AWS" className="transition hover:-translate-y-1 hover:scale-110 p-1 h-auto w-auto" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -163,7 +163,7 @@ import Image from "next/image";
                                                 <div className="w-full lg:w-1/2 lg:pl-7">
                                                     <div className="p-4 bg-color-div transition duration-500 hover:-translate-y-1 hover:scale-105 text-color-pj rounded-xl shadow-lg ">
                                                         <div className="p-1 flex justify-center">
-                                                            <Image src="images/detro2.png" alt="" className="w-32 h-auto" />
+                                                            <Image width={100} height={100} src="/images/detro2.png" alt="" className="w-32 h-auto" />
                                                         </div>
                                                         <div className="text-center">
                                                             <h1 className=" text-base font-bold text-color-pj">Estagiário de Desenvolvimento Full-Stack - 2022 / 2023</h1>
@@ -175,10 +175,10 @@ import Image from "next/image";
                                                         </div>
                                                         <div className=" mt-3 flex justify-center">
                                                             <div className=" px-6 h-12 py-2 gap-4 rounded-2xl flex ">
-                                                                <Image src="/images/Laravel.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
-                                                                <Image src="/images/mysql.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
-                                                                <Image src="/images/php.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
-                                                                <Image src="/images/bootstrap.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/Laravel.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/mysql.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/php.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/bootstrap.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
                                                             </div>
                                                         </div>
 
@@ -199,7 +199,7 @@ import Image from "next/image";
                                                 <div className="w-full lg:w-1/2 lg:pr-8">
                                                     <div className="p-4 bg-color-div transition duration-500 hover:-translate-y-1 hover:scale-105 text-color-pj rounded-xl shadow-lg ">
                                                         <div className="p-1 flex justify-center">
-                                                            <Image src="images/lasalle.png" alt="" className="w-24 h-auto" />
+                                                            <Image width={100} height={100} src="/images/lasalle.png" alt="" className="w-24 h-auto" />
                                                         </div>
                                                         <div className="text-center">
                                                             <h1 className=" text-base font-bold text-color-pj">Administrativo Informática - 2017 / 2022</h1>
@@ -211,7 +211,7 @@ import Image from "next/image";
                                                         </div>
                                                         <div className=" mt-3 flex justify-center">
                                                             <div className=" px-6 h-12 py-2 gap-4 rounded-2xl flex ">
-                                                                <Image src="/images/php.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
+                                                                <Image width={100} height={100} src="/images/php.png" alt="" className="transition hover:-translate-y-1 hover:scale-110   h-auto w-auto" />
                                                             </div>
                                                         </div>
 
